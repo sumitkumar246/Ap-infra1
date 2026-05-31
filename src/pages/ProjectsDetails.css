@@ -1,0 +1,85 @@
+.details-container {
+  min-height: 100vh;
+  background: #0f172a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 20px;
+}
+
+.details-card {
+  display: flex;
+  flex-wrap: wrap;
+
+  max-width: 1000px;
+  width: 100%;
+
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+
+  border-radius: 15px;
+  overflow: hidden;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.details-card img {
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* INFO */
+.details-info {
+  flex: 1;
+  padding: 30px;
+  color: white;
+}
+
+.details-info h1 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #38bdf8;
+}
+
+/* PRICE */
+.price {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* LOCATION */
+.location {
+  font-size: 16px;
+  margin-bottom: 15px;
+  opacity: 0.9;
+}
+
+/* DESCRIPTION */
+.desc {
+  font-size: 14px;
+  opacity: 0.8;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* BUTTON */
+.details-info button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+
+  background: #38bdf8;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.details-info button:hover {
+  background: white;
+  transform: scale(1.05);
+}

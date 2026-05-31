@@ -1,0 +1,19 @@
+.hero-image{
+
+  animation: zoomEffect 8s infinite alternate ease-in-out;
+
+}
+
+/* BACKGROUND ANIMATION */
+
+@keyframes zoomEffect{
+
+  0%{
+    transform: scale(1);
+  }
+
+  100%{
+    transform: scale(1.15);
+  }
+
+}
