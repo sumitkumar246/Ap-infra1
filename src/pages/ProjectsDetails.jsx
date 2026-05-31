@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import "./ProjectsDetails.css";
 
 const projectData = [
@@ -21,7 +21,7 @@ const projectData = [
       "Fully furnished apartment with gym, security and parking facilities.",
     img: "https://images.unsplash.com/photo-1570129477492-45c003edd2be",
   },
-   {
+  {
     id: "3",
     title: "Beach House",
     price: "₹85 Lakh",
@@ -30,7 +30,7 @@ const projectData = [
       "Compact and comfortable studio apartment with modern amenities.",
     img: "https://images.unsplash.com/photo-1505691938895-1758d7feb511",
   },
-   {
+  {
     id: "4",
     title: "Office Space",
     price: "₹1.2 Cr",
@@ -43,6 +43,7 @@ const projectData = [
 
 const ProjectDetails = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
 
   const project = projectData.find((p) => p.id === id);
 
@@ -64,7 +65,18 @@ const ProjectDetails = () => {
 
           <p className="desc">{project.description}</p>
 
-          <button>Book Now</button>
+          <button
+            className="book-btn"
+            onClick={() =>
+              navigate("/contact", {
+                state: {
+                  projectName: project.title,
+                },
+              })
+            }
+          >
+            Book Now
+          </button>
         </div>
       </div>
     </div>
