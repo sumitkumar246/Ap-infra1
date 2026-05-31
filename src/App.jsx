@@ -14,6 +14,7 @@ import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import ProjectsDetails from "./pages/ProjectsDetails";
 import Services from "./pages/Services";
+import ServicesDetails from "./pages/ServiceDetails";
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/projects/:id" element={<ProjectsDetails />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/service/:id" element={<ServicesDetails />} />
       </Routes>
 
       <Footer />

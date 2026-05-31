@@ -1,0 +1,119 @@
+.service-details {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8fafc, #eef4ff);
+  padding: 100px 20px;
+}
+
+.service-hero {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.back-btn {
+  border: none;
+  background: white;
+  padding: 12px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 5px 15px rgba(0,0,0,.08);
+  margin-bottom: 40px;
+}
+
+.service-icon-large {
+  width: 120px;
+  height: 120px;
+  margin: auto;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2563eb, #4f46e5);
+  color: white;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-hero h1 {
+  font-size: 52px;
+  color: #111827;
+  margin-top: 25px;
+}
+
+.service-hero p {
+  color: #6b7280;
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 20px auto;
+}
+
+.features-box {
+  max-width: 1100px;
+  margin: 80px auto 0;
+}
+
+.features-box h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 36px;
+  color: #111827;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}
+
+.feature-card {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  text-align: center;
+  font-weight: 600;
+  box-shadow: 0 10px 25px rgba(0,0,0,.08);
+  transition: 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+}
+
+.contact-btn {
+  display: block;
+  margin: 50px auto 0;
+  border: none;
+  padding: 16px 35px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #2563eb, #4f46e5);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.contact-btn:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .service-hero h1 {
+    font-size: 36px;
+  }
+
+  .features-box h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-hero h1 {
+    font-size: 28px;
+  }
+
+  .service-icon-large {
+    width: 90px;
+    height: 90px;
+    font-size: 40px;
+  }
+}

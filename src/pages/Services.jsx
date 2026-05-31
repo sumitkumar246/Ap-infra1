@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./Services.css";
 
 const servicesData = [
@@ -29,6 +30,8 @@ const servicesData = [
 ];
 
 const Services = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="services-container">
       <h1 className="title">Our Services</h1>
@@ -39,7 +42,12 @@ const Services = () => {
             <div className="icon">{item.icon}</div>
             <h2>{item.title}</h2>
             <p>{item.desc}</p>
-            <button>Learn More</button>
+
+            <button
+              onClick={() => navigate(`/service/${item.id}`)}
+            >
+              Learn More
+            </button>
           </div>
         ))}
       </div>
