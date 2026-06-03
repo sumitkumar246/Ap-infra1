@@ -44,10 +44,14 @@ const Services = () => {
             <p>{item.desc}</p>
 
             <button
-              onClick={() => navigate(`/service/${item.id}`)}
-            >
-              Learn More
-            </button>
+  type="button"
+  onClick={() => {
+    console.log("clicked", item.id);
+    navigate(`/services/${item.id}`);
+  }}
+>
+  Learn More
+</button>
           </div>
         ))}
       </div>

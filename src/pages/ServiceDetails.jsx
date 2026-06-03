@@ -6,6 +6,7 @@ import {
   FaKey,
   FaFileContract,
   FaArrowLeft,
+  FaFilePdf,
 } from "react-icons/fa";
 import "./ServiceDetails.css";
 
@@ -63,6 +64,21 @@ const services = {
   },
 };
 
+const brochures = [
+  {
+    title: "M3M City Of Dreams",
+    location: "Sector 36 & 37, Panipat",
+    text: "Largest smart city development of Panipat with greens, clubhouse, sports zones and premium lifestyle.",
+    pdf: "/pdfs/m3m-city-of-dreams.pdf",
+  },
+  {
+    title: "Godrej Evora Estate",
+    location: "Sector 40, Panipat",
+    text: "Peaceful plotted estate with clubhouse, pool, gym, library, theatre, cafe and wellness spaces.",
+    pdf: "/pdfs/godrej-evora-estate.pdf",
+  },
+];
+
 const ServiceDetails = () => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -70,45 +86,63 @@ const ServiceDetails = () => {
   const service = services[id];
 
   if (!service) {
-    return <h2 style={{ textAlign: "center" }}>Service Not Found</h2>;
+    return <h2 className="not-found">Service Not Found</h2>;
   }
 
   return (
     <div className="service-details">
-      <div className="service-hero">
-        <button
-          className="back-btn"
-          onClick={() => navigate("/services")}
-        >
+      <section className="service-hero">
+        <button className="back-btn" onClick={() => navigate("/services")}>
           <FaArrowLeft /> Back
         </button>
 
-        <div className="service-icon-large">
-          {service.icon}
-        </div>
+        <div className="service-icon-large">{service.icon}</div>
 
         <h1>{service.title}</h1>
         <p>{service.description}</p>
-      </div>
+      </section>
 
-      <div className="features-box">
+      <section className="features-box">
         <h2>What's Included</h2>
 
         <div className="features-grid">
           {service.features.map((feature, index) => (
             <div key={index} className="feature-card">
-              ✓ {feature}
+              <span>✓</span> {feature}
             </div>
           ))}
         </div>
 
-        <button
-          className="contact-btn"
-          onClick={() => navigate("/contact")}
-        >
+        <button className="contact-btn" onClick={() => navigate("/contact")}>
           Contact Us
         </button>
-      </div>
+      </section>
+
+      <section className="brochure-section">
+        <span className="small-title">PROJECT PDF</span>
+        <h2>Premium Project Brochures</h2>
+        <p className="brochure-subtitle">
+          View complete details, amenities and project information.
+        </p>
+
+        <div className="brochure-cards">
+          {brochures.map((item, index) => (
+            <div className="brochure-card" key={index}>
+              <div className="pdf-icon">
+                <FaFilePdf />
+              </div>
+
+              <h3>{item.title}</h3>
+              <h4>{item.location}</h4>
+              <p>{item.text}</p>
+
+              <a href={item.pdf} target="_blank" rel="noreferrer">
+                View Brochure
+              </a>
+            </div>
+          ))}
+        </div>
+      </section>
     </div>
   );
 };

@@ -1,21 +1,32 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
 
   const closeMenu = () => setOpen(false);
 
+  const goToEnquiry = () => {
+    setOpen(false);
+    navigate("/enquiry");
+  };
+
   return (
     <nav className="navbar">
-      <div className="logo">My Brand</div>
-      <img src="https://media.licdn.com/dms/image/v2/D560BAQEWcEarXUQ-4g/company-logo_200_200/B56ZtVP1MrJoAI-/0/1766661777186/ap_infra_group_logo?e=2147483647&v=beta&t=B9U1C6BQdOahTgLkTqDJ4WCo9vKiNtyfeMXHzPgzHxY" alt="Logo" />
+      <div className="nav-logo" onClick={() => navigate("/")}>
+        <img src="/image.png" alt="AP Infra Logo" className="logo-img" />
 
-      {/* MENU ICON */}
-      <div className="menu-icon" onClick={() => setOpen(!open)}>
-        ☰
+        <div className="logo-text">
+          <h2>AP INFRA</h2>
+          <span>GROUP</span>
+        </div>
       </div>
+
+      <button className="menu-icon" onClick={() => setOpen(!open)}>
+        {open ? "✕" : "☰"}
+      </button>
 
       <ul className={`nav-links ${open ? "active" : ""}`}>
         <li>
@@ -31,8 +42,20 @@ const Navbar = () => {
         </li>
 
         <li>
+          <NavLink to="/projects" onClick={closeMenu}>
+            Projects
+          </NavLink>
+        </li>
+
+        <li>
           <NavLink to="/services" onClick={closeMenu}>
             Services
+          </NavLink>
+        </li>
+
+        <li>
+          <NavLink to="/gallery" onClick={closeMenu}>
+            Gallery
           </NavLink>
         </li>
 
@@ -43,9 +66,9 @@ const Navbar = () => {
         </li>
 
         <li>
-          <NavLink to="/projects" onClick={closeMenu}>
-            Projects
-          </NavLink>
+          <button type="button" className="nav-btn" onClick={goToEnquiry}>
+            Enquire Now
+          </button>
         </li>
       </ul>
     </nav>

@@ -15,7 +15,7 @@ const PremiumContactForm = () => {
 
   const [formData, setFormData] = useState({
     name: "",
-    email: "",
+    email: "", 
     password: "",
     phone: "",
     message: "",

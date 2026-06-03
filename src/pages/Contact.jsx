@@ -1,5 +1,11 @@
 import React, { useState } from "react";
 import axios from "axios";
+import {
+  FaPhoneAlt,
+  FaEnvelope,
+  FaMapMarkerAlt,
+  FaWhatsapp,
+} from "react-icons/fa";
 import "./Contact.css";
 
 const Contact = () => {
@@ -29,7 +35,6 @@ const Contact = () => {
       );
 
       console.log(res.data);
-
       setSuccess(true);
 
       setFormData({
@@ -50,9 +55,57 @@ const Contact = () => {
 
   return (
     <section className="contact-section">
-      <div className="contact-overlay">
+      <div className="contact-wrapper">
+        <div className="contact-left">
+          <span className="contact-tag">CONTACT US</span>
+
+          <h1>
+            Let’s Find Your <span>Dream Property</span>
+          </h1>
+
+          <p>
+            Connect with AP Infra Luxury Living for premium villas, apartments,
+            plots and real estate consultation.
+          </p>
+
+          <div className="contact-info">
+            <div className="info-card">
+              <FaPhoneAlt />
+              <div>
+                <h3>Call Us</h3>
+                <p>+91 7082003056</p>
+              </div>
+            </div>
+
+            <div className="info-card">
+              <FaEnvelope />
+              <div>
+                <h3>Email</h3>
+                <p>info@apinfra.com</p>
+              </div>
+            </div>
+
+            <div className="info-card">
+              <FaMapMarkerAlt />
+              <div>
+                <h3>Location</h3>
+                <p>Gurgaon, Haryana</p>
+              </div>
+            </div>
+
+            <a
+              href="https://wa.me/919711005826"
+              target="_blank"
+              rel="noreferrer"
+              className="whatsapp-btn"
+            >
+              <FaWhatsapp /> Chat on WhatsApp
+            </a>
+          </div>
+        </div>
+
         <div className="contact-box">
-          <h1>Get In Touch</h1>
+          <h2>Send Inquiry</h2>
 
           {success && (
             <div className="success-message">

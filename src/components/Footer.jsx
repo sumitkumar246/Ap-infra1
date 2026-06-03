@@ -1,51 +1,92 @@
 import React from "react";
 import {
-  FaFacebook,
-  FaTwitter,
+  FaFacebookF,
   FaInstagram,
+  FaLinkedinIn,
   FaWhatsapp,
+  FaMapMarkerAlt,
+  FaPhoneAlt,
+  FaEnvelope,
 } from "react-icons/fa";
 import "./Footer.css";
 
 const Footer = () => {
   return (
     <footer className="footer">
-      <div className="footer-container">
 
-        {/* Logo / Title */}
-        <h2 className="footer-title">Apna Real Estate</h2>
+      <div className="footer-overlay">
 
-        <p className="footer-text">
-          Find your dream property with us. Premium homes, best locations.
-        </p>
+        <div className="footer-container">
 
-        {/* Social Icons */}
-        <div className="social-icons">
+          {/* Company */}
+          <div className="footer-col">
+            <h2 className="footer-logo">AP INFRA GROUP</h2>
 
-          <a href="https://www.facebook.com" target="_blank" rel="noreferrer">
-            <FaFacebook />
-          </a>
+           <b> <p>
+              Delivering premium residential and commercial properties
+              with trust, transparency and excellence.
+            </p></b>
 
-          <a href="https://twitter.com" target="_blank" rel="noreferrer">
-            <FaTwitter />
-          </a>
+            <div className="social-icons">
+              <a href="#"><FaFacebookF /></a>
+              <a href="#"><FaInstagram /></a>
+              <a href="#"><FaLinkedinIn /></a>
+              <a href="#"><FaWhatsapp /></a>
+            </div>
+          </div>
 
-          <a href="https://www.instagram.com" target="_blank" rel="noreferrer">
-            <FaInstagram />
-          </a>
+          {/* Quick Links */}
+          <div className="footer-col">
+            <h3>Quick Links</h3>
 
-          <a href="https://wa.me/919876543210" target="_blank" rel="noreferrer">
-            <FaWhatsapp />
-          </a>
+            <ul>
+              <b><li><a href="/">Home</a></li></b>
+              <b><li><a href="/about">About Us</a></li></b>
+              <b><li><a href="/projects">Projects</a></li></b>
+              <b><li><a href="/services">Services</a></li></b>
+              <b><li><a href="/contact">Contact</a></li></b>
+            </ul>
+          </div>
+
+          {/* Projects */}
+          <div className="footer-col">
+            <h3>Featured Projects</h3>
+
+            <ul>
+              <b><li>Luxury Villas</li></b>
+              <b><li>Premium Apartments</li></b>
+              <b><li>Commercial Spaces</li></b>
+              <b><li>Investment Properties</li></b>
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div className="footer-col">
+            <h3>Contact Us</h3>
+
+           <b> <p>
+              <FaMapMarkerAlt /> Gurgaon, Haryana
+            </p></b>
+
+           <b> <p>
+              <FaPhoneAlt /> +91 7082003056
+            </p></b>
+
+             <b> <p>
+            <FaEnvelope /> info@apinfra.com
+            </p></b>
+          </div>
 
         </div>
 
-        {/* Bottom */}
-        <p className="footer-bottom">
-          © {new Date().getFullYear()} Apna Real Estate. All Rights Reserved.
-        </p>
+        <div className="footer-bottom">
+          <p>
+            © {new Date().getFullYear()} AP INFRA GROUP. All Rights Reserved.
+          </p>
+        </div>
 
       </div>
+
     </footer>
   );
 };

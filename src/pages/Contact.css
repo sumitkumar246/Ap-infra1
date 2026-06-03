@@ -1,98 +1,270 @@
 .contact-section {
   min-height: 100vh;
-  background: url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c")
-    center/cover no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 50px 20px;
+  padding: 100px 20px;
+  background:
+    radial-gradient(circle at top left, rgba(212, 175, 55, 0.25), transparent 35%),
+    linear-gradient(135deg, #fffdf7, #fff4d6);
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
 }
 
-.contact-overlay {
-  width: 100%;
-  display: flex;
-  justify-content: center;
+.contact-wrapper {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 45px;
   align-items: center;
 }
 
+.contact-left {
+  animation: slideLeft 1s ease;
+}
+
+.contact-tag {
+  display: inline-block;
+  background: #111;
+  color: #d4af37;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.contact-left h1 {
+  font-size: 52px;
+  line-height: 1.15;
+  color: #111;
+  margin-bottom: 18px;
+}
+
+.contact-left h1 span {
+  color: #b8860b;
+}
+
+.contact-left p {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.8;
+  max-width: 560px;
+}
+
+.contact-info {
+  margin-top: 35px;
+  display: grid;
+  gap: 18px;
+}
+
+.info-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  padding: 18px;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(212, 175, 55, 0.12);
+  transition: 0.35s;
+}
+
+.info-card:hover {
+  transform: translateX(8px);
+  box-shadow: 0 18px 38px rgba(212, 175, 55, 0.25);
+}
+
+.info-card svg {
+  min-width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #d4af37, #f7d56b);
+  color: #111;
+  padding: 13px;
+  border-radius: 50%;
+}
+
+.info-card h3 {
+  margin: 0 0 5px;
+  color: #111;
+}
+
+.info-card p {
+  margin: 0;
+  color: #666;
+  line-height: 1.4;
+}
+
+.whatsapp-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  padding: 14px 28px;
+  background: #25d366;
+  color: white;
+  border-radius: 35px;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 12px 28px rgba(37, 211, 102, 0.3);
+  transition: 0.3s;
+}
+
+.whatsapp-btn:hover {
+  transform: translateY(-5px);
+}
+
+/* FORM BOX */
 .contact-box {
-  width: 100%;
-  max-width: 650px;
-  padding: 40px;
-  border-radius: 20px;
-  backdrop-filter: blur(12px);
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255,255,255,0.2);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
-  color: rgb(26, 24, 24);
+  background: rgba(255, 255, 255, 0.9);
+  padding: 42px;
+  border-radius: 28px;
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08);
+  animation: slideRight 1s ease;
+}
+
+.contact-box h2 {
+  font-size: 34px;
+  color: #b8860b;
+  margin-bottom: 22px;
   text-align: center;
 }
 
-.contact-box h1 {
-  font-size: 42px;
-  margin-bottom: 10px;
-}
-
-.contact-box p {
-  margin-bottom: 30px;
-  color: #0c0808;
-  font-size: 18px;
+.success-message {
+  background: #ecfdf5;
+  color: #047857;
+  padding: 13px;
+  border-radius: 12px;
+  margin-bottom: 18px;
+  text-align: center;
+  font-weight: 700;
+  border: 1px solid #bbf7d0;
 }
 
 .contact-box form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 18px;
 }
 
 .contact-box input,
 .contact-box textarea {
-  padding: 15px;
-  border: none;
+  width: 100%;
+  padding: 15px 18px;
+  border: 1px solid rgba(184, 134, 11, 0.3);
+  border-radius: 14px;
   outline: none;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.473);
-  color: rgb(10, 10, 10);
-  font-size: 16px;
+  background: #fffdf7;
+  color: #111;
+  font-size: 15px;
+  transition: 0.3s;
+  resize: none;
 }
 
-.contact-box input::placeholder,
-.contact-box textarea::placeholder {
-  color: rgba(15, 13, 13, 0.8);
+.contact-box input:focus,
+.contact-box textarea:focus {
+  border-color: #d4af37;
+  box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.16);
+  background: #fff;
 }
 
 .contact-box button {
   padding: 15px;
   border: none;
-  border-radius: 10px;
-  background: linear-gradient(135deg, #d4af37, #f5d76e);
+  border-radius: 35px;
+  background: linear-gradient(135deg, #d4af37, #f7d56b);
   color: #111;
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: 800;
   cursor: pointer;
-  transition: 0.4s;
+  transition: 0.35s;
+  box-shadow: 0 15px 32px rgba(212, 175, 55, 0.35);
 }
 
 .contact-box button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 42px rgba(212, 175, 55, 0.45);
 }
 
-.success-message {
-  background: rgba(46, 204, 113, 0.2);
-  border: 1px solid #2ecc71;
-  color: #fff;
-  padding: 12px;
-  border-radius: 10px;
-  margin-bottom: 20px;
+/* ANIMATION */
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-45px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(45px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-left {
+    text-align: center;
+  }
+
+  .contact-left p {
+    margin: auto;
+  }
+
+  .whatsapp-btn {
+    margin: auto;
+  }
 }
 
 @media (max-width: 768px) {
-  .contact-box {
-    padding: 25px;
+  .contact-section {
+    padding: 80px 15px;
   }
 
-  .contact-box h1 {
-    font-size: 32px;
+  .contact-left h1 {
+    font-size: 38px;
+  }
+
+  .contact-box {
+    padding: 30px 22px;
+  }
+
+  .info-card {
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-left h1 {
+    font-size: 30px;
+  }
+
+  .contact-box h2 {
+    font-size: 27px;
+  }
+
+  .contact-box {
+    border-radius: 20px;
+  }
+
+  .info-card {
+    padding: 15px;
+  }
+
+  .whatsapp-btn {
+    width: 100%;
   }
 }

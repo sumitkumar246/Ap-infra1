@@ -1,0 +1,154 @@
+/* BACKGROUND */
+.about {
+  background: linear-gradient(135deg, #fffdf7, #fff6e0);
+  padding: 60px 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* HERO */
+.heroCard {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #fff, #fff7e6);
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(212, 175, 55, 0.15);
+  margin-bottom: 40px;
+}
+
+.heroCard h1 {
+  font-size: 42px;
+  color: #222;
+}
+
+.heroCard h1 span {
+  color: #d4af37; /* GOLD */
+}
+
+.heroCard p {
+  color: #555;
+  max-width: 700px;
+  margin: auto;
+}
+
+.tag {
+  display: inline-block;
+  background: #d4af37;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  font-size: 12px;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin: 40px 0;
+}
+
+/* GLASS CARD */
+.glassCard {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 25px;
+  border-radius: 15px;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  transition: 0.4s;
+}
+
+.glassCard h2 {
+  color: #d4af37;
+}
+
+/* FEATURE CARD */
+.featureCard {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  border: 1px solid #f0e1b5;
+  transition: 0.4s;
+}
+
+.featureCard svg {
+  font-size: 30px;
+  color: #d4af37;
+  margin-bottom: 10px;
+}
+
+/* STATS */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin: 50px 0;
+}
+
+.statCard {
+  text-align: center;
+  padding: 30px;
+  border-radius: 15px;
+  background: #fff;
+  border: 1px solid #f0e1b5;
+  transition: 0.4s;
+}
+
+.statCard h2 {
+  color: #d4af37;
+}
+
+/* CTA */
+.cta {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #d4af37, #f5d76e);
+  border-radius: 20px;
+  color: #fff;
+}
+
+.cta button {
+  margin-top: 15px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 30px;
+  background: #fff;
+  color: #d4af37;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cta button:hover {
+  transform: scale(1.05);
+}
+
+/* ===== ANIMATIONS ===== */
+
+.fadeUp {
+  animation: fadeUp 1s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* HOVER EFFECTS */
+.hoverUp:hover {
+  transform: translateY(-8px);
+}
+
+.hoverGlow:hover {
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.25);
+  transform: translateY(-5px);
+  transition: 0.4s;
+}

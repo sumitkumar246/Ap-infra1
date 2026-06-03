@@ -1,19 +1,137 @@
-.hero-image{
-
-  animation: zoomEffect 8s infinite alternate ease-in-out;
-
+.home {
+  width: 100%;
+  overflow-x: hidden;
+  background: #fffaf0;
+  position: relative;
 }
 
-/* BACKGROUND ANIMATION */
+.cursor-light {
+  position: fixed;
+  width: 520px;
+  height: 520px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 215, 0, 0.28),
+    rgba(212, 175, 55, 0.14),
+    transparent 72%
+  );
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  filter: blur(70px);
+  z-index: 1;
+  transition: left 0.08s linear, top 0.08s linear;
+}
 
-@keyframes zoomEffect{
+.luxury-intro,
+.promise-section {
+  position: relative;
+  z-index: 2;
+}
 
-  0%{
-    transform: scale(1);
+.luxury-intro {
+  padding: 110px 8%;
+  text-align: center;
+  background: linear-gradient(135deg, #fffaf0, #ffffff, #fff6dc);
+}
+
+.section-tag {
+  color: #b8912f;
+  letter-spacing: 5px;
+  font-size: 14px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.luxury-intro h2 {
+  font-size: 54px;
+  color: #111;
+  font-weight: 900;
+  margin-bottom: 25px;
+  line-height: 1.15;
+}
+
+.luxury-intro p {
+  max-width: 850px;
+  margin: auto;
+  color: #555;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.promise-section {
+  padding: 90px 8%;
+  background: linear-gradient(135deg, #fff8e1, #ffffff, #fff3c4);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.promise-card {
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  padding: 50px 35px;
+  border-radius: 24px;
+  transition: 0.45s ease;
+  box-shadow: 0 18px 45px rgba(212, 175, 55, 0.15);
+}
+
+.promise-card:hover {
+  transform: translateY(-12px) scale(1.03);
+  border-color: #d4af37;
+  box-shadow:
+    0 25px 65px rgba(212, 175, 55, 0.35),
+    0 0 45px rgba(212, 175, 55, 0.22);
+}
+
+.promise-card h3 {
+  font-size: 46px;
+  color: #d4af37;
+  margin-bottom: 22px;
+}
+
+.promise-card h4 {
+  color: #111;
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.promise-card p {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+@media (max-width: 992px) {
+  .luxury-intro h2 {
+    font-size: 40px;
   }
 
-  100%{
-    transform: scale(1.15);
+  .promise-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .cursor-light {
+    display: none;
   }
 
+  .luxury-intro {
+    padding: 70px 20px;
+  }
+
+  .luxury-intro h2 {
+    font-size: 32px;
+  }
+
+  .luxury-intro p {
+    font-size: 16px;
+  }
+
+  .promise-section {
+    grid-template-columns: 1fr;
+    padding: 65px 20px;
+  }
 }

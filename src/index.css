@@ -14,6 +14,9 @@ body{
   margin:0;
   position:relative;
 }
+body {
+  font-family: "Poppins", sans-serif;
+}
 body .navbar{
   position:fixed;
   top:0;
@@ -25,15 +28,15 @@ body .navbar{
 body{
   font-family:'Poppins', sans-serif;
   overflow-x:hidden;
-  background:#488bd854;
+  
 }
 html{
   scroll-behavior:smooth;
 }
-.image{
-  width: 300px;
+.image {
+  width: 100%;
+  max-width: 100%;
   transition: 0.5s;
-
 }
 .image:hover{
   transform: scale(1.05) rotate(36deg);
