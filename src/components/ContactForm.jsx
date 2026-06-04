@@ -186,7 +186,7 @@ const PremiumContactForm = () => {
                 </h4>
 
                 <p className="text-gray-400">
-                  Gurgaon, Haryana, India
+                   Panipat+Gurgaon, Haryana
                 </p>
 
               </div>

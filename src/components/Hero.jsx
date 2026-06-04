@@ -15,8 +15,9 @@ const Hero = () => {
         loop
         playsInline
       >
-        <source src="/videos/230060_medium.mp4" type="video/mp4" />
+        <source src="/videos/12785063_3840_2160_30fps.mp4" type="video/mp4" />
       </video>
+      
 
       <div className="hero-overlay"></div>
 

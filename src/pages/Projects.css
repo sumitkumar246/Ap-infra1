@@ -3,7 +3,7 @@
   background: linear-gradient(135deg, #fffdf7, #fff6e0);
   padding: 60px 20px;
   margin-top: 60px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 /* HERO */
@@ -153,4 +153,17 @@
 .hoverUp:hover {
   transform: translateY(-8px);
   transition: 0.4s;
+}
+.projects-container,
+.projects-container p,
+.projects-container span,
+.projects-container button {
+  font-family: "Montserrat", sans-serif !important;
+}
+
+.projects-container h1,
+.projects-container h2,
+.projects-container h3 {
+  font-family: "Cinzel", serif !important;
+  font-weight: 600;
 }

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useLocation } from "react-router-dom";
 import {
   FaPhoneAlt,
   FaEnvelope,
@@ -9,13 +10,23 @@ import {
 import "./Contact.css";
 
 const Contact = () => {
+  const location = useLocation();
+
+  const brochure =
+    location.state?.brochure ||
+    "/pdfs/M3M City Of Dreams Panipat Brochure.pdf";
+
+  const projectName = location.state?.projectName || "";
+
   const [success, setSuccess] = useState(false);
 
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     mobile: "",
-    message: "",
+    message: projectName
+      ? `I am interested in ${projectName}. Please share more details.`
+      : "",
   });
 
   const handleChange = (e) => {
@@ -29,13 +40,15 @@ const Contact = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.post(
-        "http://localhost:3000/api/contact",
-        formData
-      );
+      await axios.post("http://localhost:3000/api/contact", {
+        ...formData,
+        projectName,
+        brochure,
+      });
 
-      console.log(res.data);
       setSuccess(true);
+
+      window.open(brochure, "_blank");
 
       setFormData({
         name: "",
@@ -68,6 +81,12 @@ const Contact = () => {
             plots and real estate consultation.
           </p>
 
+          {projectName && (
+            <p className="selected-project">
+              Selected Project: <strong>{projectName}</strong>
+            </p>
+          )}
+
           <div className="contact-info">
             <div className="info-card">
               <FaPhoneAlt />
@@ -89,18 +108,13 @@ const Contact = () => {
               <FaMapMarkerAlt />
               <div>
                 <h3>Location</h3>
-                <p>Gurgaon, Haryana</p>
+                <p>
+                  Tdi city sco 37 near toll plaza Sector 39 Panipat Haryana PIN
+                  code 132103
+                </p>
               </div>
             </div>
 
-            <a
-              href="https://wa.me/919711005826"
-              target="_blank"
-              rel="noreferrer"
-              className="whatsapp-btn"
-            >
-              <FaWhatsapp /> Chat on WhatsApp
-            </a>
           </div>
         </div>
 
@@ -150,7 +164,7 @@ const Contact = () => {
               required
             ></textarea>
 
-            <button type="submit">Send Inquiry</button>
+            <button type="submit">Send Inquiry & Download Brochure</button>
           </form>
         </div>
       </div>

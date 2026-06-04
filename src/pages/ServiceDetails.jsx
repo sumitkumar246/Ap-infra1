@@ -22,7 +22,9 @@ const services = {
       "Site Visits & Inspections",
       "Price Negotiation Support",
     ],
+  
   },
+  
 
   2: {
     title: "Property Selling",
@@ -38,15 +40,15 @@ const services = {
   },
 
   3: {
-    title: "Rental Services",
+    title: "Investment Consulting",
     icon: <FaKey />,
     description:
-      "Discover premium rental properties for residential and commercial purposes.",
+      "Get expert advice on property investments.",
     features: [
-      "Verified Tenants",
-      "Rental Agreements",
-      "Property Management",
-      "Quick Occupancy",
+      "Market Analysis",
+      "Investment Strategies",
+      "Portfolio Management",
+      "Risk Assessment",
     ],
   },
 
@@ -69,13 +71,13 @@ const brochures = [
     title: "M3M City Of Dreams",
     location: "Sector 36 & 37, Panipat",
     text: "Largest smart city development of Panipat with greens, clubhouse, sports zones and premium lifestyle.",
-    pdf: "/pdfs/m3m-city-of-dreams.pdf",
+    pdf: "/pdfs/M3M City Of Dreams Panipat Brochure.pdf",
   },
   {
     title: "Godrej Evora Estate",
     location: "Sector 40, Panipat",
     text: "Peaceful plotted estate with clubhouse, pool, gym, library, theatre, cafe and wellness spaces.",
-    pdf: "/pdfs/godrej-evora-estate.pdf",
+    pdf: "/pdfs/Evora Estate_Clubhouse.pdf",
   },
 ];
 

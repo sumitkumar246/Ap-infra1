@@ -17,8 +17,8 @@ const servicesData = [
   },
   {
     id: 3,
-    title: "Rental Services",
-    desc: "Find the best rental properties in your area.",
+    title: "Investment Consulting",
+    desc: "Get expert advice on property investments.",
     icon: "🔑",
   },
   {

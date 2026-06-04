@@ -28,10 +28,10 @@ const Footer = () => {
             </p></b>
 
             <div className="social-icons">
-              <a href="#"><FaFacebookF /></a>
-              <a href="#"><FaInstagram /></a>
-              <a href="#"><FaLinkedinIn /></a>
-              <a href="#"><FaWhatsapp /></a>
+              <a href="https://www.facebook.com/apinfragroup?mibextid=wwXIfr&mibextid=wwXIfr"><FaFacebookF /></a>
+              <a href="https://www.instagram.com/ap_infra_group?igsh=NXJ2NGp2YnE3bDZu&utm_source=qr"><FaInstagram /></a>
+              <a href="https://www.linkedin.com/company/ap-infra-group/"><FaLinkedinIn /></a>
+              
             </div>
           </div>
 
@@ -40,11 +40,11 @@ const Footer = () => {
             <h3>Quick Links</h3>
 
             <ul>
-              <b><li><a href="/">Home</a></li></b>
-              <b><li><a href="/about">About Us</a></li></b>
-              <b><li><a href="/projects">Projects</a></li></b>
-              <b><li><a href="/services">Services</a></li></b>
-              <b><li><a href="/contact">Contact</a></li></b>
+              <li><a href="/">Home</a></li>
+              <li><a href="/about">About Us</a></li>
+              <li><a href="/projects">Projects</a></li>
+              <li><a href="/services">Services</a></li>
+              <li><a href="/contact">Contact</a></li>
             </ul>
           </div>
 
@@ -53,10 +53,10 @@ const Footer = () => {
             <h3>Featured Projects</h3>
 
             <ul>
-              <b><li>Luxury Villas</li></b>
-              <b><li>Premium Apartments</li></b>
-              <b><li>Commercial Spaces</li></b>
-              <b><li>Investment Properties</li></b>
+              <li>Luxury Villas</li>
+              <li>Premium Apartments</li>
+              <li>Commercial Spaces</li>
+              <li>Investment Properties</li>
             </ul>
           </div>
 
@@ -64,25 +64,25 @@ const Footer = () => {
           <div className="footer-col">
             <h3>Contact Us</h3>
 
-           <b> <p>
-              <FaMapMarkerAlt /> Gurgaon, Haryana
-            </p></b>
+            <p>
+              <FaMapMarkerAlt />Tdi city sco 37 near toll plaza Sector 39 panipat Haryana PIN code 132103
+            </p>
 
-           <b> <p>
+            <p>
               <FaPhoneAlt /> +91 7082003056
-            </p></b>
+            </p>
 
-             <b> <p>
+              
             <FaEnvelope /> info@apinfra.com
-            </p></b>
+            
           </div>
 
         </div>
 
         <div className="footer-bottom">
-          <p>
+          
             © {new Date().getFullYear()} AP INFRA GROUP. All Rights Reserved.
-          </p>
+          
         </div>
 
       </div>

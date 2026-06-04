@@ -75,6 +75,7 @@
   margin-bottom: 20px;
   font-weight: 900;
   letter-spacing: 2px;
+  font-family: "bodoni moda", serif;
 }
 
 .footer-logo::first-letter {
@@ -187,4 +188,26 @@
   .footer-col li:hover {
     padding-left: 0;
   }
+  
+}/* FORCE FOOTER FONT */
+footer,
+footer *,
+.footer,
+.footer *,
+.footer-overlay,
+.footer-overlay *,
+.footer-container,
+.footer-container *,
+.footer-col,
+.footer-col *,
+.footer-bottom,
+.footer-bottom * {
+  font-family: "Playfair Display", serif;
+}
+
+.footer-logo,
+.footer-col h3,
+footer h1,
+footer h2,
+footer h3 {
 }

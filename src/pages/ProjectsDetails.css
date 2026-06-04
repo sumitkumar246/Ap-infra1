@@ -1,3 +1,6 @@
+.details-info h1 {
+  font-family: "Playfair Display", serif !important;
+}
 .details-container {
   min-height: 100vh;
   background: linear-gradient(135deg, #fffdf5, #fff7d6);
@@ -128,4 +131,75 @@
   .details-info button {
     width: 100%;
   }
+}
+
+.brochure-btn {
+  display: inline-block;
+  margin-left: 15px;
+  padding: 14px 28px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #d4af37, #b8860b);
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 10px 25px rgba(212, 175, 55, 0.35);
+}
+
+.brochure-btn:hover {
+  transform: translateY(-4px) scale(1.05);
+}
+.details-info h1 {
+  font-family: "Cinzel", serif;
+}
+
+.price,
+.location,
+.desc,
+.brochure-btn,
+.details-info button {
+  font-family: "Montserrat", sans-serif;
+}
+
+@media (max-width: 768px) {
+  .brochure-btn {
+    width: 100%;
+    text-align: center;
+    margin-left: 0;
+    margin-top: 12px;
+  }
+}
+/* PROJECT DETAILS FONT */
+
+.details-card,
+.details-card * {
+  font-family: "Montserrat", sans-serif !important;
+}
+
+/* Title */
+.details-info h1 {
+  font-family: "Cinzel", serif !important;
+  font-weight: 700;
+}
+
+/* Price */
+.price {
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 700;
+}
+
+/* Location */
+.location {
+  font-family: "Montserrat", sans-serif !important;
+}
+
+/* Description */
+.desc {
+  font-family: "Montserrat", sans-serif !important;
+}
+
+/* Buttons */
+.details-info button,
+.brochure-btn {
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 600;
 }

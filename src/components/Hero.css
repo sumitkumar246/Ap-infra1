@@ -5,6 +5,7 @@
   overflow: hidden;
   display: flex;
   align-items: center;
+  margin-top: 20px;
 }
 
 .hero-video {
@@ -46,7 +47,7 @@
 
 .hero-content h1 {
   color: white;
-  font-size: clamp(40px, 6vw, 80px);
+  font-size: clamp(40px, 5.4vw, 80px);
   margin: 20px 0;
 }
 

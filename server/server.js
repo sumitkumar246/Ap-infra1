@@ -4,6 +4,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 
 import contactRoutes from "./routes/contactRoutes.js";
+import enquiryRoutes from "./routes/enquiryRoutes.js";
 
 dotenv.config();
 
@@ -15,6 +16,7 @@ app.use(express.json());
 
 // Routes
 app.use("/api", contactRoutes);
+app.use("/api", enquiryRoutes);
 
 // MongoDB Connection
 mongoose
