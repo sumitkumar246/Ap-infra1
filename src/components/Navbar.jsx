@@ -16,7 +16,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="nav-logo" onClick={() => navigate("/")}>
-        <img src="src/assets/ChatGPT Image Jun 3, 2026, 04_17_01 PM.png" alt="AP Infra Logo" className="logo-img" />
+        <img src="/images/logo.png" />
 
         <div className="logo-text">
           <h2>AP INFRA</h2>
