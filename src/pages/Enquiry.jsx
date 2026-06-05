@@ -22,7 +22,7 @@ const Enquiry = () => {
     e.preventDefault();
 
     try {
-      const res = await fetch("https://ap-infra1-1.onrender.com/api/enquiry", {
+      const res = await fetch("https://ap-infra1-4.onrender.com/api/enquiry", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -40,7 +40,7 @@ const Contact = () => {
     e.preventDefault();
 
     try {
-      await axios.post("https://ap-infra1-1.onrender.com/api/contact", {
+      await axios.post("https://ap-infra1-4.onrender.com/api/contact", {
         ...formData,
         projectName,
         brochure,
