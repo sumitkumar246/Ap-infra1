@@ -38,7 +38,7 @@ const PremiumContactForm = () => {
     try {
 
       const res = await axios.post(
-        "http://localhost:5000/api/users/register",
+        "https://ap-infra1-4.onrender.com/api/users/register",
         {
           name: formData.name,
           email: formData.email,
@@ -69,7 +69,7 @@ const PremiumContactForm = () => {
     try {
 
       const res = await axios.post(
-        "http://localhost:5000/api/users/login",
+        "https://ap-infra1-4.onrender.com/api/users/login",
         {
           email: formData.email,
           password: formData.password,
