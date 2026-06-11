@@ -7,10 +7,18 @@ const router = express.Router();
 // Save Contact Form
 router.post("/contact", async (req, res) => {
   try {
+    console.log("================================");
     console.log("Mongo Ready State:", mongoose.connection.readyState);
     console.log("BODY:", req.body);
 
-    const newContact = new Contact(req.body);
+    const newContact = new Contact({
+      name: req.body.name,
+      email: req.body.email,
+      mobile: req.body.mobile,
+      message: req.body.message,
+      projectName: req.body.projectName || "",
+      brochure: req.body.brochure || "",
+    });
 
     console.log("Before Save");
 
@@ -24,6 +32,7 @@ router.post("/contact", async (req, res) => {
       message: "Message Sent Successfully",
       data: savedContact,
     });
+
   } catch (error) {
     console.error("FULL ERROR:", error);
 
@@ -39,9 +48,15 @@ router.get("/contacts", async (req, res) => {
   try {
     console.log("Mongo Ready State:", mongoose.connection.readyState);
 
-    const contacts = await Contact.find();
+    const contacts = await Contact.find().sort({
+      createdAt: -1,
+    });
 
-    res.status(200).json(contacts);
+    res.status(200).json({
+      success: true,
+      data: contacts,
+    });
+
   } catch (error) {
     console.error("FULL ERROR:", error);
 
