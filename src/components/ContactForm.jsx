@@ -38,11 +38,6 @@ const PremiumContactForm = () => {
         }
       );
 
-      ReactGA.event("form_submit", {
-        category: "Lead",
-        label: "Premium Contact Form",
-      });
-
       alert("Enquiry Sent Successfully ✅");
 
       setFormData({
@@ -54,9 +49,12 @@ const PremiumContactForm = () => {
 
       console.log(res.data);
     } catch (error) {
-      console.log(error);
-      alert("Failed to send message ❌");
-    }
+  console.log("Full Error:", error);
+  console.log("Backend Response:", error.response?.data);
+  console.log("Status:", error.response?.status);
+
+  alert(error.response?.data?.message || "Failed to send message ❌");
+}
   };
 
   return (
