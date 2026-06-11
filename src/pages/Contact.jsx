@@ -60,10 +60,13 @@ const Contact = () => {
       setTimeout(() => {
         setSuccess(false);
       }, 3000);
-    } catch (error) {
-      console.log(error);
-      alert("Failed to send message");
-    }
+   } catch (error) {
+  console.log("Full Error:", error);
+  console.log("Backend Response:", error.response?.data);
+  console.log("Status:", error.response?.status);
+
+  alert(error.response?.data?.message || "Failed to send message");
+}
   };
 
   return (

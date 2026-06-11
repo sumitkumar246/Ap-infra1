@@ -1,4 +1,5 @@
 import express from "express";
+import mongoose from "mongoose";
 import Contact from "../models/contact.js";
 
 const router = express.Router();
@@ -6,6 +7,7 @@ const router = express.Router();
 // Save Contact Form
 router.post("/contact", async (req, res) => {
   try {
+    console.log("Mongo Ready State:", mongoose.connection.readyState);
     console.log("BODY:", req.body);
 
     const newContact = new Contact(req.body);
@@ -35,6 +37,8 @@ router.post("/contact", async (req, res) => {
 // Get All Contacts
 router.get("/contacts", async (req, res) => {
   try {
+    console.log("Mongo Ready State:", mongoose.connection.readyState);
+
     const contacts = await Contact.find();
 
     res.status(200).json(contacts);
