@@ -4,7 +4,7 @@ import "./Gallery.css";
 const images = [
   {
     name: "Tanio Lamborghini Villas",
-    img: "https://www.images.hcorealestates.com/img/gallery/da981_tanio-lamborghini-exterior.webp",
+    img: "/images/tanino1.png",
   },
   {
     name: "M3M Dreams City Panipat",
